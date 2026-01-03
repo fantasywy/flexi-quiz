@@ -2,66 +2,79 @@
   {
     "type": "blank",
     "q": "He ___ her on her last physics paper.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "complimented"
   },
   {
     "type": "blank",
     "q": "After dinner,I took a ___ around the park.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "stroll"
   },
   {
     "type": "blank",
     "q": "A hundred years ago people ___ at the idea.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "scoffed"
   },
   {
     "type": "blank",
     "q": "Two million workers are employed ___ goods for electric firms",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "processing"
   },
   {
     "type": "blank",
     "q": "The conference discussed the fair ___ of income and wealth.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "distribution"
   },
   {
     "type": "blank",
     "q": "Women's social ___ has changed much over the years.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "status"
   },
   {
     "type": "blank",
     "q": "Before he could find the ___ word she had cut him short with a question.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "fitting"
   },
   {
     "type": "blank",
     "q": "In time you'll ___ the beauty of this language.",
+    "img": "./data/images/unit5-A.jpg",
     "ans": "appreciate"
   },
   {
     "type": "blank",
-    "q": "As soon as the sun comes out, the mist will (pass away). (________)",
+    "q": "As soon as the sun comes out, the mist will (pass away).",
+    "img": "./data/images/unit5-B.jpg",
     "ans": "vanish"
   },
   {
     "type": "blank",
-    "q": "We all have certain jobs to (carry out). (________)",
+    "q": "We all have certain jobs to (carry out).",
+    "img": "./data/images/unit5-B.jpg",
     "ans": "execute"
   },
   {
     "type": "blank",
-    "q": "He should really (give up) smoking. (________)",
+    "q": "He should really (give up) smoking.",
+    "img": "./data/images/unit5-B.jpg",
     "ans": "quit"
   },
   {
     "type": "blank",
-    "q": "I see no (possibility) of his success. (________)",
+    "q": "I see no (possibility) of his success.",
+    "img": "./data/images/unit5-B.jpg",
     "ans": "prospect"
   },
   {
     "type": "blank",
-    "q": "Whatever difficulties you (meet) you can always talk to us and we will try to help. (________)",
+    "q": "Whatever difficulties you (meet) you can always talk to us and we will try to help.",
+    "img": "./data/images/unit5-B.jpg",
     "ans": "confront"
   }
 ]
