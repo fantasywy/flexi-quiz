@@ -241,21 +241,21 @@
         padding: 20px;
         color: #666;
       }
-      /* --- 移动端适配：最小改动 --- */
+      /* --- 移动端适配：修复预览滚动问题 --- */
       @media (max-width: 600px) {
         html,
         body {
           height: 100%;
-          overflow: hidden; /* 核心：禁止全局滚动条 */
+          overflow: hidden; /* 保持外层不滚动 */
           margin: 0;
           padding: 0;
         }
 
         .container {
-          height: 100vh; /* 占满全屏 */
+          height: 100vh;
           display: flex;
-          flex-direction: column; /* 垂直布局 */
-          padding: 10px;
+          flex-direction: column;
+          padding: 0; /* 移动端贴边 */
           margin: 0;
           max-width: 100%;
           border-radius: 0;
@@ -263,29 +263,44 @@
           box-sizing: border-box;
         }
 
-        /* 核心：让题目内容区在超出时内部滚动，而按钮固定在底部 */
+        /* 核心修复：让预览区域也变成一个充满屏幕的 Flex 容器 */
+        #quiz-mode,
+        #review-area {
+          display: none; /* 由 JS 动态切换为 flex */
+          flex-direction: column;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        /* 让内容列表区域滚动 */
         #q-container,
         #full-list {
-          flex: 1; /* 自动撑满剩余空间 */
-          overflow-y: auto; /* 仅在此区域开启滚动 */
-          padding-bottom: 20px;
-          -webkit-overflow-scrolling: touch; /* 让 iOS 滚动更流畅 */
+          flex: 1;
+          overflow-y: auto;
+          padding: 15px; /* 内部留出边距 */
+          -webkit-overflow-scrolling: touch;
         }
 
         .controls {
-          margin-top: auto; /* 强制将按钮推到底部 */
-          padding: 10px 0;
+          margin-top: auto;
+          padding: 15px;
           background: white;
           border-top: 1px solid #eee;
+          flex-shrink: 0; /* 防止按钮被压缩 */
+        }
+
+        .header {
+          padding: 10px 15px;
+          margin-bottom: 0;
+          flex-shrink: 0;
         }
 
         .bank-selector {
-          flex-shrink: 0; /* 防止顶部选择框被压缩 */
-          margin-bottom: 10px;
-        }
-
-        .q-img {
-          max-height: 200px; /* 进一步限制图片高度 */
+          padding: 15px;
+          margin: 0;
+          border-radius: 0;
+          border: none;
+          border-bottom: 1px solid #ddd;
         }
       }
     </style>
@@ -479,7 +494,8 @@
         document.getElementById("loading").style.display = "none";
         document.getElementById("result-panel").style.display = "none";
         document.getElementById("review-area").style.display = "none";
-        document.getElementById("quiz-mode").style.display = "block";
+        document.getElementById("quiz-mode").style.display =
+          window.innerWidth <= 600 ? "flex" : "block";
         renderQ();
       }
 
@@ -590,7 +606,11 @@
 
       function enterReview() {
         document.getElementById("result-panel").style.display = "none";
-        document.getElementById("review-area").style.display = "block";
+        const reviewArea = document.getElementById("review-area");
+
+        // 关键：移动端下设为 flex 以支持内部滚动
+        reviewArea.style.display = window.innerWidth <= 600 ? "flex" : "block";
+
         renderReview();
       }
 
