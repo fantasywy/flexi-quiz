@@ -241,6 +241,53 @@
         padding: 20px;
         color: #666;
       }
+      /* --- 移动端适配：最小改动 --- */
+      @media (max-width: 600px) {
+        html,
+        body {
+          height: 100%;
+          overflow: hidden; /* 核心：禁止全局滚动条 */
+          margin: 0;
+          padding: 0;
+        }
+
+        .container {
+          height: 100vh; /* 占满全屏 */
+          display: flex;
+          flex-direction: column; /* 垂直布局 */
+          padding: 10px;
+          margin: 0;
+          max-width: 100%;
+          border-radius: 0;
+          box-shadow: none;
+          box-sizing: border-box;
+        }
+
+        /* 核心：让题目内容区在超出时内部滚动，而按钮固定在底部 */
+        #q-container,
+        #full-list {
+          flex: 1; /* 自动撑满剩余空间 */
+          overflow-y: auto; /* 仅在此区域开启滚动 */
+          padding-bottom: 20px;
+          -webkit-overflow-scrolling: touch; /* 让 iOS 滚动更流畅 */
+        }
+
+        .controls {
+          margin-top: auto; /* 强制将按钮推到底部 */
+          padding: 10px 0;
+          background: white;
+          border-top: 1px solid #eee;
+        }
+
+        .bank-selector {
+          flex-shrink: 0; /* 防止顶部选择框被压缩 */
+          margin-bottom: 10px;
+        }
+
+        .q-img {
+          max-height: 200px; /* 进一步限制图片高度 */
+        }
+      }
     </style>
   </head>
   <body>
