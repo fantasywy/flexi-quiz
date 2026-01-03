@@ -2,79 +2,66 @@
   {
     "type": "blank",
     "q": "She began to ______ doubts about the decision.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "harbor"
   },
   {
     "type": "blank",
     "q": "Writing music ______ an important place in my life.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "occupies"
   },
   {
     "type": "blank",
     "q": "His new suit made him look very ______.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "distinguished"
   },
   {
     "type": "blank",
     "q": "Food and water are ______ for one’s survival.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "vital"
   },
   {
     "type": "blank",
     "q": "His contributions to writing prove that he is a ______ recipient of the Nobel Prize for Literature.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "worthy"
   },
   {
     "type": "blank",
     "q": "I ______ that book to be too difficult for you to understand.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "deem"
   },
   {
     "type": "blank",
     "q": "Charles Dickens is considered to be one of the greatest literary ______.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "figures"
   },
   {
     "type": "blank",
     "q": "If you don’t study, the ______ of you passing the test are low.",
-    "img": "./data/images/unit7-A.jpg",
     "ans": "odds"
   },
   {
     "type": "blank",
-    "q": "Fairy tales are (fascinating) to both girls and boys.",
-    "img": "./data/images/unit7-B.jpg",
+    "q": "Fairy tales are (fascinating) to both girls and boys. (________)",
     "ans": "appealing"
   },
   {
     "type": "blank",
-    "q": "Most fairy tales (portray) princesses as passive and helpless.",
-    "img": "./data/images/unit7-B.jpg",
+    "q": "Most fairy tales (portray) princesses as passive and helpless. (________)",
     "ans": "depict"
   },
   {
     "type": "blank",
-    "q": "Her dress was very (girly), from its pale color to its lace trim.",
-    "img": "./data/images/unit7-B.jpg",
+    "q": "Her dress was very (girly), from its pale color to its lace trim. (________)",
     "ans": "feminine"
   },
   {
     "type": "blank",
-    "q": "My favorite (quality) in the main character is her bravery.",
-    "img": "./data/images/unit7-B.jpg",
+    "q": "My favorite (quality) in the main character is her bravery. (________)",
     "ans": "trait"
   },
   {
     "type": "blank",
-    "q": "The princess rushed to the king’s rescue when he was in (trouble).",
-    "img": "./data/images/unit7-B.jpg",
+    "q": "The princess rushed to the king’s rescue when he was in (trouble). (________)",
     "ans": "distress"
   }
 ]
