@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全能刷题系统</title>
+    <style>
+      :root {
+        --primary: #4a90e2;
+        --success: #2ecc71;
+        --error: #e74c3c;
+        --admin: #f39c12;
+        --bg: #f0f2f5;
+      }
+      body {
+        font-family: sans-serif;
+        background: var(--bg);
+        padding: 20px;
+        color: #333;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* --- 新增：图片样式 --- */
+      .q-img-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      .q-img {
+        max-width: 100%;
+        max-height: 400px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        cursor: zoom-in;
+      }
+      /* -------------------- */
+
+      .bank-selector {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      select,
+      .file-btn {
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .option-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 10px;
+        background: #f8f9fa;
+        border-radius: 5px;
+      }
+      .random-label {
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .header {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .q-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .type-tag {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        background: #eee;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+
+      .status-label {
+        padding: 4px 10px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        font-weight: bold;
+      }
+      .status-correct {
+        background: #eafff2;
+        color: var(--success);
+        border: 1px solid var(--success);
+      }
+      .status-wrong {
+        background: #fff5f5;
+        color: var(--error);
+        border: 1px solid var(--error);
+      }
+
+      .options {
+        display: grid;
+        gap: 10px;
+      }
+      .option {
+        padding: 12px 15px;
+        border: 2px solid #eee;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.2s;
+        position: relative;
+      }
+      .option.selected {
+        border-color: var(--primary);
+        background: #eef6ff;
+      }
+      .option.correct {
+        border-color: var(--success) !important;
+        background: #eafff2 !important;
+      }
+      .option.wrong {
+        border-color: var(--error) !important;
+        background: #fff5f5 !important;
+      }
+
+      .blank-input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #eee;
+        border-radius: 8px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+      .blank-correct {
+        border-color: var(--success);
+        background: #eafff2;
+      }
+      .blank-wrong {
+        border-color: var(--error);
+        background: #fff5f5;
+      }
+
+      .tag {
+        float: right;
+        font-size: 0.75rem;
+        font-weight: bold;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 5px;
+      }
+      .tag-ans {
+        background: var(--success);
+        color: white;
+      }
+      .tag-user {
+        background: var(--error);
+        color: white;
+      }
+
+      .controls {
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .btn-main {
+        background: var(--primary);
+        color: white;
+        flex: 1;
+      }
+      .btn-admin {
+        background: var(--admin);
+        color: white;
+      }
+      .btn-gray {
+        background: #95a5a6;
+        color: white;
+      }
+
+      .result-panel {
+        text-align: center;
+        padding: 40px 20px;
+        display: none;
+      }
+      .result-score {
+        font-size: 3rem;
+        color: var(--primary);
+        margin: 20px 0;
+      }
+      .result-details {
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+      }
+
+      #review-area {
+        display: none;
+      }
+      .review-item {
+        padding: 20px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .review-item.editing {
+        border: 2px dashed var(--admin);
+      }
+      .admin-box {
+        background: #fff4e5;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        border: 1px solid var(--admin);
+      }
+      .loading {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bank-selector" id="bank-ui">
+        <strong>选择题库：</strong>
+        <select id="preset-select" onchange="loadPreset(this.value)">
+          <option value="">-- 请选择预设题库 --</option>
+        </select>
+        <span>或上传：</span>
+        <input
+          type="file"
+          id="file-input"
+          accept=".json"
+          onchange="handleFileUpload(event)"
+        />
+
+        <div class="option-group">
+          <label class="random-label">
+            <input type="checkbox" id="random-q" /> 🔀 随机题目
+          </label>
+          <label class="random-label">
+            <input type="checkbox" id="random-opt" /> 🎲 随机选项
+          </label>
+        </div>
+      </div>
+
+      <div id="loading" class="loading" style="display: none">
+        正在加载题库数据...
+      </div>
+
+      <div id="quiz-mode" style="display: none">
+        <div class="header">
+          <span id="progress"></span>
+          <button class="btn-admin" onclick="submitQuiz()">直接交卷</button>
+        </div>
+        <div id="q-container"></div>
+        <div class="controls">
+          <button onclick="move(-1)">上一题</button>
+          <button class="btn-main" id="next-btn" onclick="move(1)">
+            下一题
+          </button>
+        </div>
+      </div>
+
+      <div id="result-panel" class="result-panel">
+        <h2 style="color: var(--success)">🎉 交卷成功！</h2>
+        <div class="result-score" id="accuracy-rate">0%</div>
+        <div class="result-details" id="score-summary"></div>
+        <div class="controls">
+          <button class="btn-main" onclick="enterReview()">查看题目解析</button>
+          <button class="btn-admin" onclick="restartQuiz()">重新开始</button>
+          <button class="btn-gray" onclick="location.reload()">返回选题</button>
+        </div>
+      </div>
+
+      <div id="review-area">
+        <div class="header">
+          <h2>全题预览与纠错</h2>
+          <button class="btn-admin" id="edit-toggle" onclick="toggleEditMode()">
+            开启修改模式
+          </button>
+        </div>
+        <div id="full-list"></div>
+        <div class="controls" style="flex-direction: column">
+          <button class="btn-main" style="width: 100%" onclick="downloadJSON()">
+            下载修正后的 JSON
+          </button>
+          <div style="display: flex; gap: 10px; width: 100%">
+            <button class="btn-admin" style="flex: 1" onclick="restartQuiz()">
+              重新做题
+            </button>
+            <button
+              class="btn-gray"
+              style="flex: 1"
+              onclick="location.reload()"
+            >
+              返回选题
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let quizData = [];
+      let userAnswers = [];
+      let currentIndex = 0;
+      let isAdminMode = false;
+      let rawData = null;
+
+      const typeMap = { choice: "单选", multiple: "多选", blank: "填空" };
+
+      async function scanDataFolder() {
+        const select = document.getElementById("preset-select");
+        if (!select) return;
+        try {
+          const res = await fetch("data/list.json");
+          if (!res.ok) throw new Error();
+          const files = await res.json();
+          files.forEach((file) => {
+            const opt = document.createElement("option");
+            opt.value = `data/${file}`;
+            opt.innerText = `📁 ${file.split(".")[0]}`;
+            select.appendChild(opt);
+          });
+        } catch (e) {}
+      }
+      window.onload = scanDataFolder;
+
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      async function loadPreset(url) {
+        if (!url) return;
+        showLoading(true);
+        try {
+          const res = await fetch(url);
+          rawData = await res.json();
+          startQuiz(rawData);
+        } catch (e) {
+          alert("加载失败");
+          showLoading(false);
+        }
+      }
+
+      function handleFileUpload(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            rawData = JSON.parse(e.target.result);
+            startQuiz(rawData);
+          } catch (err) {
+            alert("JSON格式错误");
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      function showLoading(show) {
+        document.getElementById("loading").style.display = show
+          ? "block"
+          : "none";
+      }
+
+      function startQuiz(data) {
+        let tempQuiz = JSON.parse(JSON.stringify(data));
+        const isRandomQ = document.getElementById("random-q").checked;
+        const isRandomOpt = document.getElementById("random-opt").checked;
+
+        if (isRandomOpt) {
+          tempQuiz.forEach((item) => {
+            if (item.type !== "blank" && item.options) {
+              let correctTexts = [];
+              if (item.type === "multiple") {
+                correctTexts = item.ans.map((idx) => item.options[idx]);
+              } else {
+                correctTexts = [item.options[item.ans]];
+              }
+              shuffleArray(item.options);
+              if (item.type === "multiple") {
+                item.ans = correctTexts
+                  .map((text) => item.options.indexOf(text))
+                  .sort();
+              } else {
+                item.ans = item.options.indexOf(correctTexts[0]);
+              }
+            }
+          });
+        }
+
+        if (isRandomQ) {
+          tempQuiz = shuffleArray(tempQuiz);
+        }
+
+        quizData = tempQuiz;
+        userAnswers = quizData.map((q) => (q.type === "multiple" ? [] : ""));
+        currentIndex = 0;
+        isAdminMode = false;
+
+        document.getElementById("bank-ui").style.display = "none";
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("result-panel").style.display = "none";
+        document.getElementById("review-area").style.display = "none";
+        document.getElementById("quiz-mode").style.display = "block";
+        renderQ();
+      }
+
+      function restartQuiz() {
+        if (rawData) startQuiz(rawData);
+      }
+
+      function renderQ() {
+        const item = quizData[currentIndex];
+        const userAns = userAnswers[currentIndex];
+        document.getElementById("progress").innerText = `题目 ${
+          currentIndex + 1
+        } / ${quizData.length}`;
+
+        let html = `<div class="q-title"><span class="type-tag">${
+          typeMap[item.type] || "单选"
+        }</span>${item.q}</div>`;
+
+        // --- 新增：渲染图片 ---
+        if (item.img) {
+          html += `<div class="q-img-wrapper"><img src="${item.img}" class="q-img" onclick="window.open(this.src)"></div>`;
+        }
+
+        if (item.type === "blank") {
+          html += `<input type="text" class="blank-input" placeholder="请输入答案..." value="${userAns}" oninput="updateUserAns(this.value)" onkeydown="if(event.key==='Enter') move(1)">`;
+        } else {
+          html += `<div class="options">`;
+          item.options.forEach((opt, i) => {
+            const isSelected =
+              item.type === "multiple"
+                ? userAnswers[currentIndex].includes(i)
+                : userAnswers[currentIndex] === i;
+            html += `<div class="option ${
+              isSelected ? "selected" : ""
+            }" onclick="handleSelect(${i})">
+                        ${String.fromCharCode(65 + i)}. ${opt}
+                     </div>`;
+          });
+          html += `</div>`;
+        }
+        document.getElementById("q-container").innerHTML = html;
+        document.getElementById("next-btn").innerText =
+          currentIndex === quizData.length - 1 ? "完成并交卷" : "下一题";
+
+        // --- 新增：填空题自动聚焦功能 ---
+        if (item.type === "blank") {
+          const input = document.querySelector(".blank-input");
+          if (input) input.focus();
+        }
+      }
+
+      function handleSelect(optIdx) {
+        const item = quizData[currentIndex];
+        if (item.type === "choice" || !item.type) {
+          userAnswers[currentIndex] = optIdx;
+        } else if (item.type === "multiple") {
+          const arr = userAnswers[currentIndex];
+          const index = arr.indexOf(optIdx);
+          index > -1 ? arr.splice(index, 1) : arr.push(optIdx);
+        }
+        renderQ();
+      }
+
+      function updateUserAns(val) {
+        userAnswers[currentIndex] = val;
+      }
+
+      function move(step) {
+        if (currentIndex + step >= 0 && currentIndex + step < quizData.length) {
+          currentIndex += step;
+          renderQ();
+        } else if (currentIndex + step >= quizData.length) {
+          submitQuiz();
+        }
+      }
+
+      function submitQuiz() {
+        let correctCount = 0;
+        quizData.forEach((item, idx) => {
+          const uAns = userAnswers[idx];
+          if (item.type === "choice" || !item.type) {
+            if (uAns === item.ans) correctCount++;
+          } else if (item.type === "multiple") {
+            if (
+              JSON.stringify([...uAns].sort()) ===
+              JSON.stringify([...item.ans].sort())
+            )
+              correctCount++;
+          } else if (item.type === "blank") {
+            if (
+              uAns.toString().trim().toLowerCase() ===
+              item.ans.toString().trim().toLowerCase()
+            )
+              correctCount++;
+          }
+        });
+
+        const accuracy = ((correctCount / quizData.length) * 100).toFixed(1);
+        document.getElementById("quiz-mode").style.display = "none";
+        document.getElementById("result-panel").style.display = "block";
+        document.getElementById("accuracy-rate").innerText = accuracy + "%";
+        document.getElementById(
+          "score-summary"
+        ).innerText = `正确: ${correctCount} | 错误: ${
+          quizData.length - correctCount
+        } | 总计: ${quizData.length}`;
+      }
+
+      function enterReview() {
+        document.getElementById("result-panel").style.display = "none";
+        document.getElementById("review-area").style.display = "block";
+        renderReview();
+      }
+
+      function toggleEditMode() {
+        isAdminMode = !isAdminMode;
+        document.getElementById("edit-toggle").innerText = isAdminMode
+          ? "退出修改模式"
+          : "开启修改模式";
+        renderReview();
+      }
+
+      function renderReview() {
+        let html = "";
+        quizData.forEach((item, qIdx) => {
+          const uAns = userAnswers[qIdx];
+          let isCorrect = false;
+
+          if (item.type === "choice" || !item.type)
+            isCorrect = uAns === item.ans;
+          else if (item.type === "multiple")
+            isCorrect =
+              JSON.stringify([...uAns].sort()) ===
+              JSON.stringify([...item.ans].sort());
+          else if (item.type === "blank")
+            isCorrect =
+              uAns.toString().trim().toLowerCase() ===
+              item.ans.toString().trim().toLowerCase();
+
+          html += `<div class="review-item ${isAdminMode ? "editing" : ""}">
+                    <div style="margin-bottom:10px;">
+                        <span class="status-label ${
+                          isCorrect ? "status-correct" : "status-wrong"
+                        }">${isCorrect ? "✓ 正确" : "✗ 错误"}</span>
+                    </div>
+                    <div class="q-title"><span class="type-tag">${
+                      typeMap[item.type] || "单选"
+                    }</span>${qIdx + 1}. ${item.q}</div>`;
+
+          // --- 新增：渲染图片 ---
+          if (item.img) {
+            html += `<div class="q-img-wrapper"><img src="${item.img}" class="q-img" onclick="window.open(this.src)"></div>`;
+          }
+
+          if (item.type === "blank") {
+            html += `<input type="text" class="blank-input ${
+              isCorrect ? "blank-correct" : "blank-wrong"
+            }" value="${uAns}" readonly>
+                     <p>正确答案：<b style="color:var(--success)">${
+                       item.ans
+                     }</b></p>`;
+          } else {
+            html += `<div class="options">`;
+            item.options.forEach((opt, oIdx) => {
+              let cls = "";
+              const isBankAns =
+                item.type === "multiple"
+                  ? item.ans && item.ans.includes(oIdx)
+                  : item.ans === oIdx;
+              const isUserSel =
+                item.type === "multiple"
+                  ? uAns && uAns.includes(oIdx)
+                  : uAns === oIdx;
+              if (isBankAns) cls = "correct";
+              if (isUserSel && !isBankAns) cls = "wrong";
+
+              html += `<div class="option ${cls}" onclick="adminUpdateAns(${qIdx}, ${oIdx})">
+                        ${String.fromCharCode(65 + oIdx)}. ${opt}
+                        ${
+                          isBankAns
+                            ? '<span class="tag tag-ans">正确答案</span>'
+                            : ""
+                        }
+                        ${
+                          isUserSel && !isBankAns
+                            ? '<span class="tag tag-user">你的错误选择</span>'
+                            : ""
+                        }
+                      </div>`;
+            });
+            html += `</div>`;
+          }
+
+          // --- 新增：管理员模式修改图片地址 ---
+          if (isAdminMode) {
+            let imgUrl = item.img || "";
+            html += `<div class="admin-box">
+                        图片URL：<input type="text" style="width:70%" value="${imgUrl}" onchange="quizData[${qIdx}].img = this.value; renderReview();" placeholder="http://... 或 base64">
+                        ${
+                          item.type === "blank"
+                            ? `<br>修改答案：<input type="text" value="${item.ans}" onchange="quizData[${qIdx}].ans = this.value; renderReview();">`
+                            : ""
+                        }
+                      </div>`;
+          }
+          html += `</div>`;
+        });
+        document.getElementById("full-list").innerHTML = html;
+      }
+
+      function adminUpdateAns(qIdx, oIdx) {
+        if (!isAdminMode) return;
+        const item = quizData[qIdx];
+        if (item.type === "choice" || !item.type) {
+          item.ans = oIdx;
+        } else if (item.type === "multiple") {
+          if (!Array.isArray(item.ans)) item.ans = [];
+          const index = item.ans.indexOf(oIdx);
+          index > -1 ? item.ans.splice(index, 1) : item.ans.push(oIdx);
+        }
+        renderReview();
+      }
+
+      function downloadJSON() {
+        const blob = new Blob([JSON.stringify(quizData, null, 2)], {
+          type: "application/json",
+        });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "updated_bank.json";
+        a.click();
+      }
+    </script>
+  </body>
+</html>
