@@ -1,0 +1,277 @@
+[
+  {
+    "type": "choice",
+    "q": "1. What did the two people mentioned have in common?",
+    "options": [
+      "They both made products for women.",
+      "Before they started their companies, they worked for only $1 a day.",
+      "They both used their own money to start their business.",
+      "They were both denied promotions."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "2. What is said about opportunities in the news item?",
+    "options": [
+      "Sometimes they are covered by clouds.",
+      "They happen every day.",
+      "They don’t last for long.",
+      "You have to learn to spot them."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "3. How many records did the person mentioned set?",
+    "options": [
+      "6.",
+      "3.",
+      "4.",
+      "7."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "4. Which word was used to describe the success?",
+    "options": [
+      "Spectacular.",
+      "Consistent.",
+      "Powerful.",
+      "Competitive."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "5. Where did the event take place?",
+    "options": [
+      "The United States.",
+      "Miami.",
+      "Panama.",
+      "South America."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "6. What is true about the song 'Despacito'?",
+    "options": [
+      "It is the highest grossing song of all time.",
+      "It won a Latin Songwriters’ Hall of Fame award",
+      "It won an award on American television.",
+      "It is the most streamed song of all time."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "7. What does the person's foundation do?",
+    "options": [
+      "Give college scholarships to poor children.",
+      "Run orphanages for poor children",
+      "Build schools in poor areas.",
+      "End child labor."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "8. (Conversation One)",
+    "options": [
+      "Success is not just the result of luck.",
+      "Successful people go to elite universities.",
+      "Successful people don’t have to work hard.",
+      "You need to have some good luck to become successful."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "9. (Conversation One)",
+    "options": [
+      "Luck has nothing to do with success.",
+      "Success is only the result of hard work.",
+      "You might be lucky but you also have to work hard.",
+      "Lucky people are lazy."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "10. (Conversation One)",
+    "options": [
+      "Being born with a special talent.",
+      "Having parents who believe in you.",
+      "Having good teachers.",
+      "All of the above."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "11. (Conversation One)",
+    "options": [
+      "Luck is more important than hard work.",
+      "They have both been lucky in some ways.",
+      "Hard work is more important than luck.",
+      "Even people who work hard can be poor."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "12. (Conversation Two)",
+    "options": [
+      "Confident.",
+      "Unsure about his future.",
+      "Happy.",
+      "Sad."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "13. (Conversation Two)",
+    "options": [
+      "He never had any failures.",
+      "Success came easily to him.",
+      "He had doubts about whether he could be successful.",
+      "He had to work so hard that he didn’t have time for his family."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "14. (Conversation Two)",
+    "options": [
+      "His grandfather was at work.",
+      "His grandfather was sick.",
+      "His grandfather was away on business.",
+      "His grandfather had died."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "15. (Conversation Two)",
+    "options": [
+      "Help poor kids learn how to be successful.",
+      "Make enough money that his wife doesn’t have to work.",
+      "Start a business like his Grandfather’s.",
+      "Not have any failures."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "16. (Passage One)",
+    "options": [
+      "When you are in school, it means being at the top of your class.",
+      "When you’re graduated, it means landing the dream job.",
+      "When you are a parent, it means having a successful child.",
+      "All of the above."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "17. (Passage One)",
+    "options": [
+      "Making your parents proud.",
+      "Gaining status through getting a degree or diploma.",
+      "Both of these.",
+      "Neither of these."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "18. (Passage One)",
+    "options": [
+      "She decided to think of herself as both Asian and Australian.",
+      "She decided to think of herself as Asian.",
+      "She decided to think of herself as Australian.",
+      "She decided that she didn’t want to be neither Asian nor Australian."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "19. (Passage Two)",
+    "options": [
+      "How Students Can Manage Their Time",
+      "How to Take Good Notes in Class",
+      "How Asking Questions in Class Can Improve Your Marks",
+      "Success Strategies for Students"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "20. (Passage Two)",
+    "options": [
+      "Sit at the front of the room, take good notes and get lots of rest.",
+      "Take good notes, ask questions in class and study hard the night before your exams.",
+      "Ask questions in class, take good notes and manage your time.",
+      "Sit at the front of the room, take good notes and ask foolish questions."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "21. (Passage Two)",
+    "options": [
+      "Being quiet in class.",
+      "Studying hard the night before an exam.",
+      "Talking about what you are learning.",
+      "Imagine yourself at your graduation."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "22. (Passage Three)",
+    "options": [
+      "How teachers teach students with genius-level IQ’s.",
+      "Why some people are smarter than others.",
+      "Whether geniuses are more successful than other people.",
+      "How parents can tell if their child will be very successful."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "23. (Passage Three)",
+    "options": [
+      "They were more successful than average people.",
+      "They were less successful than average people.",
+      "Less than half of them were highly successful.",
+      "A high IQ guarantees success in life."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "24. (Passage Three)",
+    "options": [
+      "Goal-setting, self-confidence and good opportunities.",
+      "Goal-setting, perseverance and good opportunities.",
+      "Perseverance, good opportunities and self-confidence.",
+      "Goal-setting, self-confidence and perseverance."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "25. (Passage Three)",
+    "options": [
+      "A person with a very high IQ is likely to be successful in life.",
+      "A person with an average IQ can be very successful.",
+      "A person with a high IQ probably won’t be successful in school.",
+      "A person with an average IQ can never be as successful as smarter people."
+    ],
+    "ans": 1
+  }
+]

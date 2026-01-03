@@ -1,0 +1,277 @@
+[
+  {
+    "type": "choice",
+    "q": "1. What is the focus of the news report regarding university departments?",
+    "options": [
+      "Music and History Departments",
+      "College newspaper and media",
+      "Gender diversity and curriculum changes",
+      "Staff and student body"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "2. What is the main issue being discussed about the school's budget?",
+    "options": [
+      "Inclusion of the funds",
+      "Distribution of the funds",
+      "Exclusion of the funds",
+      "Elimination of the funds"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "3. Who is the person mentioned in the news story?",
+    "options": [
+      "A York College student",
+      "Mr.Troy’s son",
+      "A custodian",
+      "A homeless boy"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "4. Why was the man's action considered controversial?",
+    "options": [
+      "He locked up the young homeless boy",
+      "He thought he was doing a good deed",
+      "He let the young boy sneak in through the window",
+      "He told the Dean of York College of what he had done"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "5. What did the woman do before she moved to Chicago?",
+    "options": [
+      "She earned her master's degree",
+      "She joined Main College",
+      "She served as the Associate Dean of Harper University",
+      "She went to High School in Chicago"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "6. Which of the following is true about her academic background?",
+    "options": [
+      "She was 17 when she attended Pasadena University",
+      "She graduated from Oblinski College",
+      "She earned her master's and Ph.D at Western State University",
+      "She held teaching positions at only one college"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "7. How many different universities has she been affiliated with throughout her career?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "8. What are the speakers mainly discussing about their past education?",
+    "options": [
+      "Time spent in elementary school",
+      "Time spent in college",
+      "Time spent in secondary school",
+      "Time spent in grade school"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "9. According to the man, what was the greatest benefit of his education?",
+    "options": [
+      "The chance to sharpen his experience",
+      "The chance to sharpen his knowledge",
+      "The chance to sharpen his skills",
+      "The chance to sharpen his grades"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "10. What does the man say about his current ability?",
+    "options": [
+      "He's able to understand old style of English better",
+      "He's able to understand William Shakespeare better",
+      "He's able to communicate better",
+      "He's able to write literature better"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "11. Which famous author did the woman mention in the conversation?",
+    "options": [
+      "William Shakespeare",
+      "Oscar Wilde",
+      "George Bernard Shaw",
+      "Agatha Christie"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "12. How much is the average annual tuition mentioned in the dialogue?",
+    "options": [
+      "$33,480 a year",
+      "$33,480 for four years",
+      "$9,650 a year",
+      "$24,930 a year"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "13. Why is the man hesitating about his future career path?",
+    "options": [
+      "Because he feels that being a doctor is too stressful",
+      "Because he feels that university fees are too expensive",
+      "Because he feels that Yale or Harvard universities aren't good enough",
+      "Because he feels that medical school is too difficult"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "14. What does the figure $9,650 represent in the context of the talk?",
+    "options": [
+      "The cost of a one-year program for out-of-state college",
+      "The cost of a one-year program in a public college",
+      "The cost of a one-year program in a private college",
+      "The total debt of a four-year program"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "15. According to the woman, what is the most important thing for success?",
+    "options": [
+      "Becoming a doctor",
+      "Being from a wealthy family",
+      "Being passionate",
+      "Enrolling at Yale University"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "16. What is the main subject of Passage One?",
+    "options": [
+      "Higher Education",
+      "College Education",
+      "Bullying in Higher Education",
+      "Student/Teacher Bullying"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "17. What is a common motivation for a bully according to the speaker?",
+    "options": [
+      "The bully is bored and has to pick on someone",
+      "The bully wants to be in control",
+      "The bully has left the people he once bullied and his behaviour continues",
+      "The bull is being bullied by other students"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "18. How does the passage define 'Hazing'?",
+    "options": [
+      "Joking with someone",
+      "Wanting approval",
+      "Overcoming adversity",
+      "The practice of initiating a person into a group"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "19. What is the central theme of Passage Two?",
+    "options": [
+      "Applying to travel to the U.S.",
+      "The college application process",
+      "Applying for an American visa",
+      "Applying to teach in the U.S."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "20. What is the first thing a student should check in the application process?",
+    "options": [
+      "Standardized admission test deadline",
+      "Application deadline",
+      "Visa deadline",
+      "Program deadline"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "21. What must international students provide to prove their academic level?",
+    "options": [
+      "Credentials",
+      "Documents",
+      "Standardized admission tests",
+      "Visas"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "22. Who is the speaker's graduation speech primarily addressed to?",
+    "options": [
+      "Roommates",
+      "Parents",
+      "Classmates",
+      "The faculty and staff"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "23. What does the speaker say she will remember most about her college life?",
+    "options": [
+      "The alliances formed",
+      "The deliberations and negotiations",
+      "The enemies made",
+      "The never-ending research papers"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "24. How did the speaker feel when she first arrived at the university?",
+    "options": [
+      "Being terrified",
+      "Being unafraid",
+      "Being brave",
+      "Being confident"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "25. What sentiment does the speaker express at the end of her speech?",
+    "options": [
+      "She implies that she has no home to go to",
+      "She implies that she will miss them all",
+      "She implies that she doesn't know what to do",
+      "She implies that she has no friends"
+    ],
+    "ans": 1
+  }
+]

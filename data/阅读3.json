@@ -1,0 +1,107 @@
+[
+  {
+    "type": "choice",
+    "q": "46. The Westinghouse Science Talent Search is ______.",
+    "options": [
+      "a professional science contest for American high school students",
+      "a conventional American science contest",
+      "a respected high school science contest in the US",
+      "a science fair exclusively for high school juniors"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "47. According to the passage, the aim of the Westinghouse Science Talent Search has always been ______.",
+    "options": [
+      "to discover young scientific talents",
+      "to involve young students in scientific research",
+      "to promote scientific research in American high schools",
+      "to provide opportunities for high school juniors to present their scientific papers"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "48. The Westinghouse Science Talent Search differs from traditional science contests in that ______.",
+    "options": [
+      "it is an annual contest with the active participation of high school students",
+      "it lays emphasis on the professional quality of the projects",
+      "it is designed to search for the most promising students",
+      "it intends to find the best potential scientists"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "49. It can be concluded from the passage that ______.",
+    "options": [
+      "only the finalists of the Westinghouse Search are admitted to the college of their choice",
+      "the participants in the Westinghouse Search discover and exploit their talents by developing their own scientific projects",
+      "the Westinghouse Search attaches greater importance to the contestants' courage and determination than the project itself",
+      "no science contest in the world can match the Westinghouse Search in the precision of identifying prospective scientists"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "50. It can be inferred from the passage that the author takes a (n) ______ attitude towards the Westinghouse Science Talent Search.",
+    "options": ["positive", "negative", "neutral", "indifferent"],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "51. What is one of the reasons why more can be learned about a culture from art history than general history?",
+    "options": [
+      "Art history courses focus on politics, economics and war.",
+      "Art history contains information about people’s daily activities.",
+      "Artists understand and reflect their times better than historians.",
+      "Artists are generally more interested in religion than in politics."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "52. Why is Francisco Goya regarded as a “political” artist?",
+    "options": [
+      "Because he expressed his political views by painting.",
+      "Because he worked for the Spanish government.",
+      "Because he was very subjective in artistic creation.",
+      "Because he often expressed his political opinions publicly."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "53. Which of the following statements is TRUE according to the passage?",
+    "options": [
+      "Unlike Francisco Goya, Pablo Picasso and several Mexican artists expressed their political opinions in their paintings.",
+      "History books often reveal the compilers’ political views.",
+      "Religious art remained in Europe for centuries the only type of art because most people regarded the Bible as a holy book.",
+      "In the Middle East even today you can hardly find any human or animal figures in palaces or other buildings."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "54. The passage mainly discusses ______.",
+    "options": [
+      "the difference between general history and art history",
+      "the making of art history",
+      "what we can learn from art and art history",
+      "the influence of artists on art history"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "55. It can be learnt from this passage that ______.",
+    "options": [
+      "Islamic artists have had to create architectural decoration with images of flowers or geometric forms",
+      "history teachers are more objective than artists",
+      "it is more difficult to study art history than general history",
+      "people and stories from the Bible were painted on churches and other buildings so that most people could understand the book"
+    ],
+    "ans": 3
+  }
+]

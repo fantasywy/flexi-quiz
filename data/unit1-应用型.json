@@ -1,0 +1,80 @@
+[
+  {
+    "type": "blank",
+    "q": "Students have ___ goals when planning their future.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "ambitious"
+  },
+  {
+    "type": "blank",
+    "q": "The doctor requested that his patient ___ his upcoming appointment.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "confirm"
+  },
+  {
+    "type": "blank",
+    "q": "The winner ___ accepted his award.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "humbly"
+  },
+  {
+    "type": "blank",
+    "q": "Identification is ___ to prove who you are.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "required"
+  },
+  {
+    "type": "blank",
+    "q": "She ___ to be the daughter of an old friend.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "turned out"
+  },
+  {
+    "type": "blank",
+    "q": "Mary ___ to become an astronaut when she grows up.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "aspires"
+  },
+  {
+    "type": "blank",
+    "q": "The pianist was a(n) ___ talent that had performed around the world.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "extraordinary"
+  },
+  {
+    "type": "blank",
+    "q": "The student ___ to accomplish his goal of achieving a high mark in his classes.",
+    "img": "./data/images/unit1-A.jpg",
+    "ans": "yearned"
+  },
+  {
+    "type": "blank",
+    "q": "I (began) my speech with a humorous story.",
+    "img": "./data/images/unit1-B.jpg",
+    "ans": "launched"
+  },
+  {
+    "type": "blank",
+    "q": "Do not let the amount of work you need to get for school (frighten) you.",
+    "img": "./data/images/unit1-B.jpg",
+    "ans": "intimidate"
+  },
+  {
+    "type": "blank",
+    "q": "Always make sure to (keep up) your grades in school.",
+    "img": "./data/images/unit1-B.jpg",
+    "ans": "maintain"
+  },
+  {
+    "type": "blank",
+    "q": "As students, we (aim) to achieve our scholarly goals.",
+    "img": "./data/images/unit1-B.jpg",
+    "ans": "strive"
+  },
+  {
+    "type": "blank",
+    "q": "The book I needed from the library was not (accessible), because someone else had taken it out.",
+    "img": "./data/images/unit1-B.jpg",
+    "ans": "available"
+  }
+]

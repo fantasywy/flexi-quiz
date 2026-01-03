@@ -1,0 +1,102 @@
+[
+  {
+    "type": "choice",
+    "q": "46. The passage is mainly concerned with ______.",
+    "options": [
+      "the importance of eye contact",
+      "the potency of nonverbal techniques",
+      "successful speech delivery",
+      "an effective way to gain visual feedback"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "47. According to the passage, a good speaker must ______.",
+    "options": [
+      "\"sell\" his or her ideas to an audience",
+      "maintain direct eye contact with listeners",
+      "be very persuasive and believable",
+      "be exceptionally well-disposed"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "48. The word \"target\" in the last sentence of the first paragraph can best be replaced by \"______.\"",
+    "options": ["destination", "goal", "audience", "follower"],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "49. In daily life, what may two passers-by do when their glances happen to meet?",
+    "options": [
+      "Keep looking at each other.",
+      "Say hello immediately.",
+      "Make a conversation.",
+      "Smile to each other."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "50. How can having eye contact with the audience help a speaker?",
+    "options": [
+      "Know how their speech is going on.",
+      "Control the feedback of the audience.",
+      "Overcome unnecessary nervousness.",
+      "Interact with the audience actively."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "51. The author's purpose in writing this passage is to tell ______.",
+    "options": [
+      "readers how to be popular with people around",
+      "teenagers how to learn to decide things for themselves",
+      "parents how to control and guide their children",
+      "people how to understand and respect each other"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "52. What does the writer think of today's teenagers?",
+    "options": [
+      "They are fond of making striking claims.",
+      "They lack the courage to be really different.",
+      "They are self-centered and socially rebellious.",
+      "They rarely care about what the crowd is doing."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "53. What is one of the barriers that a teenager must climb over to find his or her own path?",
+    "options": [
+      "Parents' preference of popular kids.",
+      "Awards from the teenage market.",
+      "Respect from one's classmates.",
+      "Tolerance of unique thoughts."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "54. The author thinks of advertisements as ______.",
+    "options": ["convincing", "influential", "instructive", "authoritative"],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "55. What should people do during their teenage years?",
+    "options": [
+      "Differ from others in as many ways as possible.",
+      "Get into the right season and become popular.",
+      "Rebel against parents and the popularity wave.",
+      "Make an effort to find their real selves."
+    ],
+    "ans": 3
+  }
+]

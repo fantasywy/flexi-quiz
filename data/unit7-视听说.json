@@ -1,0 +1,277 @@
+[
+  {
+    "type": "choice",
+    "q": "1. (Questions 1 and 2 will be based on the following news item.)",
+    "options": [
+      "The Hulk's superhuman strength.",
+      "Captain America's strength, speed and endurance.",
+      "The superheroes are so different from each other.",
+      "The superheroes are the most powerful in the world."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "2. (Questions 1 and 2 will be based on the following news item.)",
+    "options": [
+      "They remind us to put aside our differences.",
+      "One superhero is better than the other.",
+      "They know that each member of the group is important.",
+      "Everyone on the team should have a common goal."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "3. (Questions 3 and 4 will be based on the following news item.)",
+    "options": [
+      "To let others find, follow and contribute to your conversation.",
+      "To inform people about an event.",
+      "To be humorous.",
+      "All of the above."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "4. (Questions 3 and 4 will be based on the following news item.)",
+    "options": [
+      "Hashtagging.",
+      "Posting.",
+      "Trending.",
+      "Emailing."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "5. (Questions 5 to 7 will be based on the following news item.)",
+    "options": [
+      "Everyone has a digital camera or camera phone",
+      "People are better photographers.",
+      "People today look good.",
+      "Everyone wants a picture of themselves."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "6. (Questions 5 to 7 will be based on the following news item.)",
+    "options": [
+      "15 percent.",
+      "30 percent.",
+      "50 percent.",
+      "60 percent"
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "7. (Questions 5 to 7 will be based on the following news item.)",
+    "options": [
+      "You feel part of a group.",
+      "Friends see your picture.",
+      "Your picture goes viral.",
+      "Friends like, share and write positive comments."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "8. (Conversation One)",
+    "options": [
+      "She has to study for her exam.",
+      "She already had coffee.",
+      "She doesn't like coffee.",
+      "She has to relax."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "9. (Conversation One)",
+    "options": [
+      "The episode where Kim marries Kanye.",
+      "The episode where Khloe isn't spending time with her mother.",
+      "The episode where Kim, Khloe and Kourtney see homeless people.",
+      "The episode where Kourtney tries to be more positive."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "10. (Conversation One)",
+    "options": [
+      "She moves the shelter.",
+      "She puts together a party for the women.",
+      "She builds a bigger shelter.",
+      "She invites the women to her house."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "11. (Conversation One)",
+    "options": [
+      "Her reality television show.",
+      "Her businesses.",
+      "Her two children",
+      "All of the above."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "12. (Conversation Two)",
+    "options": [
+      "His new cell phone.",
+      "Candy and stardust.",
+      "Avatars",
+      "Pokémon Go."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "13. (Conversation Two)",
+    "options": [
+      "Catch it.",
+      "Create it.",
+      "Walk with it.",
+      "Feed it."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "14. (Conversation Two)",
+    "options": [
+      "Because there are too many Pokémons.",
+      "Because they can step on candy.",
+      "Because there are a lot of cars on the street.",
+      "Because she was walking too fast."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "15. (Conversation Two)",
+    "options": [
+      "1 kilometer.",
+      "3 kilometers.",
+      "5 kilometers.",
+      "6 kilometers."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "16. (Passage One)",
+    "options": [
+      "Intelligent.",
+      "Professional.",
+      "Nerdy.",
+      "Socially awkward."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "17. (Passage One)",
+    "options": [
+      "People that own a comic book store.",
+      "How to make jokes.",
+      "Intelligent people.",
+      "Friends being together."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "18. (Passage One)",
+    "options": [
+      "Living up to his parents‘ expectations.",
+      "Connecting with the people around him.",
+      "Trying to live his dreams.",
+      "Owning a comic book store."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "19. (Passage Two)",
+    "options": [
+      "Simple and elegant.",
+      "Fancy.",
+      "Over-designed,",
+      "Plain."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "20. (Passage Two)",
+    "options": [
+      "It is a simple dress.",
+      "It is a short dress.",
+      "It can only be worn once.",
+      "It is affordable."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "21. (Passage Two)",
+    "options": [
+      "To go on vacation.",
+      "When the product is not available in the store in their country.",
+      "To pay more for the product.",
+      "To have a shopping experience."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "22. (Passage Three)",
+    "options": [
+      "Content can be made pubic",
+      "Content can be shared with a single person.",
+      "Content can be shared with a group of people.",
+      "Content cannot be shared."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "23. (Passage Three)",
+    "options": [
+      "To have a list of your friends",
+      "To suggest people who can be your friends on Facebook.",
+      "To send emails to your friends.",
+      "To help you remember your friends."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "24. (Passage Three)",
+    "options": [
+      "From the people you're already friends with.",
+      "From your email's contacts.",
+      "From your friends at school.",
+      "From your friends at work."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "25. (Passage Three)",
+    "options": [
+      "By writing letters.",
+      "By sending emails.",
+      "By sharing photographs and live chat.",
+      "By sharing photographs and emails."
+    ],
+    "ans": 2
+  }
+]

@@ -1,0 +1,80 @@
+[
+  {
+    "type": "blank",
+    "q": "I don't like this young woman; she seems a social ___.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "butterfly"
+  },
+  {
+    "type": "blank",
+    "q": "The novel ___ the imagination of thousands of readers.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "captured"
+  },
+  {
+    "type": "blank",
+    "q": "God knows. How can I ___ six exams a week?",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "endure"
+  },
+  {
+    "type": "blank",
+    "q": "A tiny star can ___ in the darkness.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "spark"
+  },
+  {
+    "type": "blank",
+    "q": "There are good chances of ___ in this firm.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "promotion"
+  },
+  {
+    "type": "blank",
+    "q": "Mrs. Hill is ___ on Tom's marrying Susan.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "keen"
+  },
+  {
+    "type": "blank",
+    "q": "Some professions are ___ with people who have not grown up.",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "stuffed"
+  },
+  {
+    "type": "blank",
+    "q": "How should this ___ girl see the coldness of the letter?",
+    "img": "./data/images/unit2-A.jpg",
+    "ans": "innocent"
+  },
+  {
+    "type": "blank",
+    "q": "After years of great effort, their company (developed) into one of the largest in the industry.",
+    "img": "./data/images/unit2-B.jpg",
+    "ans": "flourished"
+  },
+  {
+    "type": "blank",
+    "q": "Be careful not to (involve) yourself in their local conflicts.",
+    "img": "./data/images/unit2-B.jpg",
+    "ans": "engage"
+  },
+  {
+    "type": "blank",
+    "q": "They soon developed a very (close) relationship.",
+    "img": "./data/images/unit2-B.jpg",
+    "ans": "intimate"
+  },
+  {
+    "type": "blank",
+    "q": "This is a(n) (unusual) opportunity that will lead you to success.",
+    "img": "./data/images/unit2-B.jpg",
+    "ans": "unique"
+  },
+  {
+    "type": "blank",
+    "q": "They will (go on) to build another laboratory building.",
+    "img": "./data/images/unit2-B.jpg",
+    "ans": "proceed"
+  }
+]

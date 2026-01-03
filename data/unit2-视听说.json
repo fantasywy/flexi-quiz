@@ -1,0 +1,277 @@
+[
+  {
+    "type": "choice",
+    "q": "1. What did the couple decide to do according to the news item?",
+    "options": [
+      "They decided to go on their honeymoon with their friends.",
+      "They decided to travel with their children.",
+      "They decided to take their honeymoon before they got married.",
+      "They decided to get married a second time."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "2. What is true about happier people mentioned in the report?",
+    "options": [
+      "Happier people live a wealthy life and have more to give.",
+      "Happier people live for each other.",
+      "Happier people have good health, live a long time, and give more of themselves.",
+      "Happier people enjoy life more and enjoy doing things on their own."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "3. What is the main topic of this news item?",
+    "options": [
+      "Older men dating younger women.",
+      "Dating.",
+      "Divorces.",
+      "Older women dating younger men."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "4. What percentage was mentioned in the news?",
+    "options": [
+      "45 percent.",
+      "40 percent.",
+      "97 percent.",
+      "12 percent."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "5. Why did IRCC feel the applicants got married?",
+    "options": [
+      "Because IRCC had too many applicants to process.",
+      "Because IRCC felt that applicants got married as a trick to get their immigration papers.",
+      "Because the paperwork was completed incorrectly.",
+      "Because the sponsorship was only applicable to married couples and not their children."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "6. What defines a 'marriage of convenience' in this context?",
+    "options": [
+      "When two people marry for love.",
+      "When two people marry because they have children together.",
+      "When two people marry under false pretenses.",
+      "When two people are married by government officials."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "7. (Based on the news item)",
+    "options": [
+      "Jola has taken a lie detector test before.",
+      "Jola loves her new spouse very much.",
+      "Jola wants to be with her spouse.",
+      "Jola met her spouse in Europe while travelling."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "8. (Conversation One)",
+    "options": [
+      "Not dating.",
+      "Dating.",
+      "Being single.",
+      "Being married for 18 years."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "9. (Conversation One)",
+    "options": [
+      "The son's name.",
+      "How long the mom has been married.",
+      "What the mom does for a living.",
+      "The mom's interests."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "10. (Conversation One)",
+    "options": [
+      "Online dating.",
+      "Blind dating.",
+      "Setup dating through friends.",
+      "Social networking."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "11. (Conversation One)",
+    "options": [
+      "Going out on a blind date.",
+      "Being set up by friends.",
+      "Meeting someone through socializing.",
+      "Having a picnic with her children."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "12. (Conversation Two)",
+    "options": [
+      "How good something is.",
+      "How often you watch something.",
+      "Being in a league.",
+      "Being at the park."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "13. (Conversation Two)",
+    "options": [
+      "They both like basketball.",
+      "They both like playing baseball.",
+      "They both like baseball games.",
+      "They both like watching sports on TV."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "14. (Conversation Two)",
+    "options": [
+      "She would love to play baseball.",
+      "She would love to watch baseball on TV.",
+      "She would love to ask her friend to play in the same league.",
+      "She would love to go to the baseball game with her friend."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "15. (Conversation Two)",
+    "options": [
+      "The date of the baseball game.",
+      "The woman plays in a league.",
+      "They have been dating for two months.",
+      "Baseball s the woman's favourite sport."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "16. (Passage One)",
+    "options": [
+      "Love of a Parent.",
+      "Love of a Mother.",
+      "Love of Nature.",
+      "Love of Life."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "17. (Passage One)",
+    "options": [
+      "We feel angry.",
+      "We feel grateful.",
+      "We feel it's the end of the world.",
+      "We feel love."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "18. (Passage One)",
+    "options": [
+      "Mother says, 'I’ll be with you forever.'",
+      "Mother says, 'Call me any time.'",
+      "Mother has no expectations.",
+      "Mother loves you unconditionally."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "19. (Passage Two)",
+    "options": [
+      "Finding love.",
+      "Sharing your life with someone.",
+      "Learning how to love yourself.",
+      "Loving others before you love yourself."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "20. (Passage Two)",
+    "options": [
+      "It gives us the ability to be selfish.",
+      "It gives us the power to appreciate the kind of life we want.",
+      "It gives us the ability to love ourselves.",
+      "It gives us the power to be strong."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "21. (Passage Two)",
+    "options": [
+      "Feeling separate from your own love.",
+      "Being nice to yourself.",
+      "Finding peace and tranquility.",
+      "Having energy to enjoy life."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "22. (Passage Three)",
+    "options": [
+      "Letter.",
+      "Card.",
+      "Lyrics.",
+      "Email."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "23. (Passage Three)",
+    "options": [
+      "Lack of communication.",
+      "Lack of feelings.",
+      "Lack of love.",
+      "Lack of emotions."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "24. (Passage Three)",
+    "options": [
+      "It's always easy to find the perfect song to express yourself.",
+      "When you can't find a way to express yourself, let music speak for you.",
+      "It's not always the entire song that touches us.",
+      "Music will emotionally affect us in a positive or negative way."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "25. (Passage Three)",
+    "options": [
+      "Memories.",
+      "Poems.",
+      "Feelings.",
+      "Songs."
+    ],
+    "ans": 3
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "type": "choice",
+    "q": "46. According to the psychologists, a compulsive spender is one who spends large amounts of money ______.",
+    "options": [
+      "and takes great pleasure from what he or she buys",
+      "in order to satisfy his or her basic needs in life",
+      "just to meet his or her strong psychological need",
+      "with an entirely irrational eagerness"
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "47. According to the author, compulsive bargain hunters are in constant search of the lowest possible prices ______.",
+    "options": [
+      "because it can save money to help their budgets",
+      "because they can openly boast of their triumph over others in getting things for less",
+      "and will not have money problems if they can keep to their budgets",
+      "and feel satisfied if they can get things for less than others"
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "48. How do compulsive bargain hunters feel when they buy something cheaper than other people do?",
+    "options": [
+      "They are cleverer than other people.",
+      "They are helping the business grow.",
+      "They have achieved a victory.",
+      "They can do better next time."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "49. How do business people make use of the psychology of spending habits?",
+    "options": [
+      "Offer therapy services to customers.",
+      "Consider customers' psychology in their advertising and sales method.",
+      "Help customers solve their personality problems.",
+      "Produce popular commodities."
+    ],
+    "ans": 1
+  },
+  {
+    "type": "choice",
+    "q": "50. The article is mainly about ______.",
+    "options": [
+      "the psychology of money-spending habits",
+      "the purchasing habits of compulsive spenders",
+      "a special psychology of bargain hunting",
+      "the use of the psychology of spending habits in business"
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "51. What is a key element to ensure success of the service industry?",
+    "options": [
+      "Provide services in the most efficient way.",
+      "Keep up with the latest scientific developments.",
+      "Use the best equipment to make the best products.",
+      "Have the right and properly motivated employees."
+    ],
+    "ans": 3
+  },
+  {
+    "type": "choice",
+    "q": "52. What does Marissa King discuss in her new book?",
+    "options": [
+      "Networking in the workplace.",
+      "Reasons to socialize or to work.",
+      "Effective management approaches.",
+      "The complexity of motivating people."
+    ],
+    "ans": 0
+  },
+  {
+    "type": "choice",
+    "q": "53. Why do some people hesitate about thinking strategically about their social relationships?",
+    "options": [
+      "Because they lack the knowledge of some useful strategies.",
+      "Because they are resistant to developing social relationships.",
+      "Because they see networking as something unfavorable.",
+      "Because they focus more on winning a promotion."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "54. What possible benefit can workers obtain from connecting with their colleagues?",
+    "options": [
+      "They may find their colleagues satisfactory.",
+      "They may move to open-plan offices.",
+      "They may obtain a higher salary.",
+      "They may catch up in their work."
+    ],
+    "ans": 2
+  },
+  {
+    "type": "choice",
+    "q": "55. Which of the following approaches is recommendable to employers?",
+    "options": [
+      "Ask employees to work in open-plan layouts.",
+      "Encourage employees to interact more often.",
+      "Distinguish employees by three network types.",
+      "Assess employees' work by quality but not quantity."
+    ],
+    "ans": 1
+  }
+]
