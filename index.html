@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <title>全能刷题系统 - 极简版</title>
+    <title>全能刷题系统 - 极简增强版</title>
     <style>
       :root {
         --primary: #4a90e2;
@@ -34,8 +34,6 @@
         border-radius: 20px;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
       }
-
-      /* --- 菜单与配置 --- */
       .bank-selector-card {
         border: 1px solid #e2e8f0;
         border-radius: 12px;
@@ -94,8 +92,6 @@
         font-size: 0.9rem;
         cursor: pointer;
       }
-
-      /* --- 题目显示 --- */
       .header {
         margin-bottom: 20px;
         display: flex;
@@ -113,7 +109,17 @@
       .q-title {
         font-size: 1.2rem;
         font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .q-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
         margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       }
       .type-tag {
         display: inline-block;
@@ -138,8 +144,15 @@
         border-color: var(--primary);
         background: var(--primary-light);
       }
-
-      /* --- 答题卡样式 --- */
+      .blank-group {
+        margin-bottom: 12px;
+      }
+      .blank-label {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin-bottom: 4px;
+        display: block;
+      }
       #sheet-overlay {
         position: fixed;
         top: 0;
@@ -188,8 +201,6 @@
         border: 2px solid var(--warning);
         font-weight: bold;
       }
-
-      /* --- 控制按钮 --- */
       .controls {
         margin-top: 30px;
         display: flex;
@@ -222,8 +233,6 @@
         flex: 0.5;
         font-size: 1.2rem;
       }
-
-      /* --- 解析页样式 --- */
       .review-card {
         padding: 20px 0;
         border-bottom: 1px solid #f1f5f9;
@@ -260,7 +269,6 @@
         border-radius: 50%;
         margin-right: 8px;
       }
-
       @media (max-width: 600px) {
         body {
           padding: 0;
@@ -397,7 +405,7 @@
             );
           }
         } catch (e) {
-          container.innerHTML = `<div style="padding:20px">未发现题库文件。</div>`;
+          container.innerHTML = `<div style="padding:20px">未发现题库文件或加载失败。</div>`;
         }
       };
 
@@ -407,26 +415,36 @@
       }
 
       async function loadAndSplit(url, contentDiv, fileName) {
-        const res = await fetch(url);
-        const data = await res.json();
-        for (let i = 0; i < data.length; i += 50) {
-          const chunk = data.slice(i, i + 50);
-          const div = document.createElement("div");
-          div.className = "menu-item";
-          div.innerText =
-            data.length <= 50
-              ? `${fileName} (全量)`
-              : `第 ${i + 1}-${Math.min(i + 50, data.length)} 题`;
-          div.onclick = () => startQuiz(chunk);
-          contentDiv.appendChild(div);
-        }
+        try {
+          const res = await fetch(url);
+          const data = await res.json();
+          for (let i = 0; i < data.length; i += 50) {
+            const chunk = data.slice(i, i + 50);
+            const div = document.createElement("div");
+            div.className = "menu-item";
+            div.innerText =
+              data.length <= 50
+                ? `${fileName} (全量)`
+                : `第 ${i + 1}-${Math.min(i + 50, data.length)} 题`;
+            div.onclick = () => startQuiz(chunk);
+            contentDiv.appendChild(div);
+          }
+        } catch (e) {}
       }
 
       function startQuiz(data) {
         quizData = JSON.parse(JSON.stringify(data));
         if (document.getElementById("random-q").checked)
           quizData.sort(() => Math.random() - 0.5);
-        userAnswers = quizData.map((q) => (q.type === "multiple" ? [] : ""));
+
+        // 增强初始化：如果是填空题且ans是数组，初始化对应长度的空数组
+        userAnswers = quizData.map((q) => {
+          if (q.type === "multiple") return [];
+          if (q.type === "blank" && Array.isArray(q.ans))
+            return new Array(q.ans.length).fill("");
+          return "";
+        });
+
         currentIndex = 0;
         document.getElementById("bank-ui").style.display = "none";
         document.getElementById("quiz-mode").style.display = "block";
@@ -438,6 +456,7 @@
         document.getElementById("progress").innerText = `${
           currentIndex + 1
         } / ${quizData.length}`;
+
         let html = `<div class="q-title"><span class="type-tag">${
           item.type === "multiple"
             ? "多选"
@@ -446,9 +465,26 @@
             : "单选"
         }</span>${item.q}</div>`;
 
+        if (item.img) {
+          html += `<img src="${item.img}" class="q-img" alt="题目图片">`;
+        }
+
         if (item.type === "blank") {
-          html += `<input type="text" class="blank-input" style="width:100%; padding:15px; border:2px solid #e2e8f0; border-radius:12px; box-sizing:border-box" 
-                   value="${userAnswers[currentIndex]}" oninput="userAnswers[currentIndex]=this.value">`;
+          if (Array.isArray(item.ans)) {
+            // 生成对应的多个空
+            item.ans.forEach((_, i) => {
+              html += `<div class="blank-group">
+                        <label class="blank-label">第 ${i + 1} 空</label>
+                        <input type="text" style="width:100%; padding:12px; border:2px solid #e2e8f0; border-radius:10px; box-sizing:border-box" 
+                        value="${
+                          userAnswers[currentIndex][i] || ""
+                        }" oninput="userAnswers[currentIndex][${i}]=this.value">
+                       </div>`;
+            });
+          } else {
+            html += `<input type="text" style="width:100%; padding:15px; border:2px solid #e2e8f0; border-radius:12px; box-sizing:border-box" 
+                     value="${userAnswers[currentIndex]}" oninput="userAnswers[currentIndex]=this.value">`;
+          }
         } else {
           html += `<div class="options">`;
           item.options.forEach((opt, i) => {
@@ -488,7 +524,7 @@
           currentIndex += dir;
           renderQ();
         } else if (currentIndex + dir >= quizData.length) {
-          submitQuiz();
+          confirmEarlySubmit();
         }
       }
 
@@ -500,7 +536,11 @@
             .map((q, i) => {
               const ans = userAnswers[i];
               const isDone =
-                q.type === "multiple" ? ans.length > 0 : ans !== "";
+                q.type === "multiple"
+                  ? ans.length > 0
+                  : Array.isArray(ans)
+                  ? ans.some((v) => v !== "")
+                  : ans !== "";
               return `<div class="sheet-num ${isDone ? "done" : ""} ${
                 i === currentIndex ? "current" : ""
               }" onclick="jumpTo(${i})">${i + 1}</div>`;
@@ -519,14 +559,20 @@
       }
 
       function confirmEarlySubmit() {
-        const unanswered = userAnswers.filter(
-          (a) => a === "" || (Array.isArray(a) && a.length === 0)
-        ).length;
-        const msg =
-          unanswered > 0
-            ? `还有 ${unanswered} 题没做，确定要交卷吗？`
-            : `确定交卷吗？`;
-        if (confirm(msg)) submitQuiz();
+        const unanswered = userAnswers.filter((a, idx) => {
+          const q = quizData[idx];
+          if (q.type === "multiple") return a.length === 0;
+          if (Array.isArray(a)) return a.every((v) => v === "");
+          return a === "";
+        }).length;
+        if (
+          confirm(
+            unanswered > 0
+              ? `还有 ${unanswered} 题没做完，确定要交卷吗？`
+              : `确定交卷吗？`
+          )
+        )
+          submitQuiz();
       }
 
       function submitQuiz() {
@@ -540,7 +586,15 @@
             )
               correct++;
           } else if (q.type === "blank") {
-            if (u.toString().trim() === q.ans.toString().trim()) correct++;
+            if (Array.isArray(q.ans)) {
+              const isAllRight = q.ans.every(
+                (val, idx) =>
+                  val.toString().trim() === (u[idx] || "").toString().trim()
+              );
+              if (isAllRight) correct++;
+            } else {
+              if (u.toString().trim() === q.ans.toString().trim()) correct++;
+            }
           } else {
             if (u === q.ans) correct++;
           }
@@ -560,43 +614,75 @@
         let html = "";
         quizData.forEach((q, i) => {
           const u = userAnswers[i];
-          const isAllCorrect = JSON.stringify(u) === JSON.stringify(q.ans);
+
+          // 判定逻辑修复
+          let isAllCorrect = false;
+          if (q.type === "multiple") {
+            isAllCorrect =
+              JSON.stringify([...u].sort()) ===
+              JSON.stringify([...q.ans].sort());
+          } else if (Array.isArray(q.ans)) {
+            isAllCorrect = q.ans.every(
+              (val, idx) =>
+                val.toString().trim() === (u[idx] || "").toString().trim()
+            );
+          } else {
+            isAllCorrect = u.toString().trim() === q.ans.toString().trim();
+          }
+
           html += `<div class="review-card">
                    <p><b><span class="status-dot" style="background:${
                      isAllCorrect ? "var(--success)" : "var(--error)"
                    }"></span>${i + 1}. ${q.q}</b></p>`;
+
+          if (q.img) html += `<img src="${q.img}" class="q-img">`;
+
           if (q.type !== "blank") {
             q.options.forEach((opt, idx) => {
-              const isCorrect = Array.isArray(q.ans)
+              // 判定当前选项是否属于正确答案（多选单选通用）
+              const isOptionCorrect = Array.isArray(q.ans)
                 ? q.ans.includes(idx)
                 : q.ans === idx;
-              const isSelected = Array.isArray(u) ? u.includes(idx) : u === idx;
+              // 判定当前选项是否被用户勾选了
+              const isOptionSelected = Array.isArray(u)
+                ? u.includes(idx)
+                : u === idx;
+
               html += `<div class="review-opt ${
-                isCorrect ? "correct" : isSelected ? "wrong" : ""
+                isOptionCorrect ? "correct" : isOptionSelected ? "wrong" : ""
               }">${String.fromCharCode(65 + idx)}. ${opt} ${
-                isCorrect ? "✓" : isSelected ? "✗" : ""
+                isOptionCorrect ? "✓" : isOptionSelected ? "✗" : ""
               }</div>`;
             });
           }
-          html += `<div class="review-badge">
-                   <div style="color:var(--success); font-weight:600">正确答案: ${
-                     q.type === "blank"
-                       ? q.ans
-                       : Array.isArray(q.ans)
-                       ? q.ans.map((a) => String.fromCharCode(65 + a)).join(",")
-                       : String.fromCharCode(65 + q.ans)
-                   }</div>
-                   <div style="color:${
-                     isAllCorrect ? "var(--success)" : "var(--error)"
-                   }">你的答案: ${
-            q.type === "blank"
-              ? u || "未填"
-              : u === "" || u.length === 0
+
+          const ansTxt = Array.isArray(q.ans)
+            ? q.ans
+                .map((v) =>
+                  q.type === "blank" ? v : String.fromCharCode(65 + v)
+                )
+                .join(" | ")
+            : q.type === "blank"
+            ? q.ans
+            : String.fromCharCode(65 + q.ans);
+
+          const userTxt = Array.isArray(u)
+            ? q.type === "blank"
+              ? u.map((v) => v || "空").join(" | ")
+              : u.length === 0
               ? "未选"
-              : Array.isArray(u)
-              ? u.map((a) => String.fromCharCode(65 + a)).join(",")
-              : String.fromCharCode(65 + u)
-          }</div>
+              : u.map((v) => String.fromCharCode(65 + v)).join(",")
+            : u === ""
+            ? "未填"
+            : q.type === "blank"
+            ? u
+            : String.fromCharCode(65 + u);
+
+          html += `<div class="review-badge">
+                    <div style="color:var(--success); font-weight:600">正确答案: ${ansTxt}</div>
+                    <div style="color:${
+                      isAllCorrect ? "var(--success)" : "var(--error)"
+                    }">你的答案: ${userTxt}</div>
                    </div></div>`;
         });
         document.getElementById("review-list").innerHTML = html;
