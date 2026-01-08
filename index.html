@@ -437,7 +437,6 @@
         if (document.getElementById("random-q").checked)
           quizData.sort(() => Math.random() - 0.5);
 
-        // 增强初始化：如果是填空题且ans是数组，初始化对应长度的空数组
         userAnswers = quizData.map((q) => {
           if (q.type === "multiple") return [];
           if (q.type === "blank" && Array.isArray(q.ans))
@@ -471,7 +470,6 @@
 
         if (item.type === "blank") {
           if (Array.isArray(item.ans)) {
-            // 生成对应的多个空
             item.ans.forEach((_, i) => {
               html += `<div class="blank-group">
                         <label class="blank-label">第 ${i + 1} 空</label>
@@ -580,9 +578,11 @@
         quizData.forEach((q, i) => {
           const u = userAnswers[i];
           if (q.type === "multiple") {
+            // 修复点：确保 q.ans 是数组再进行 JSON 比对
+            const targetAns = Array.isArray(q.ans) ? q.ans : [q.ans];
             if (
               JSON.stringify([...u].sort()) ===
-              JSON.stringify([...q.ans].sort())
+              JSON.stringify([...targetAns].sort())
             )
               correct++;
           } else if (q.type === "blank") {
@@ -615,13 +615,13 @@
         quizData.forEach((q, i) => {
           const u = userAnswers[i];
 
-          // 判定逻辑修复
           let isAllCorrect = false;
           if (q.type === "multiple") {
+            const targetAns = Array.isArray(q.ans) ? q.ans : [q.ans];
             isAllCorrect =
               JSON.stringify([...u].sort()) ===
-              JSON.stringify([...q.ans].sort());
-          } else if (Array.isArray(q.ans)) {
+              JSON.stringify([...targetAns].sort());
+          } else if (q.type === "blank" && Array.isArray(q.ans)) {
             isAllCorrect = q.ans.every(
               (val, idx) =>
                 val.toString().trim() === (u[idx] || "").toString().trim()
@@ -631,19 +631,17 @@
           }
 
           html += `<div class="review-card">
-                   <p><b><span class="status-dot" style="background:${
-                     isAllCorrect ? "var(--success)" : "var(--error)"
-                   }"></span>${i + 1}. ${q.q}</b></p>`;
+                    <p><b><span class="status-dot" style="background:${
+                      isAllCorrect ? "var(--success)" : "var(--error)"
+                    }"></span>${i + 1}. ${q.q}</b></p>`;
 
           if (q.img) html += `<img src="${q.img}" class="q-img">`;
 
           if (q.type !== "blank") {
             q.options.forEach((opt, idx) => {
-              // 判定当前选项是否属于正确答案（多选单选通用）
               const isOptionCorrect = Array.isArray(q.ans)
                 ? q.ans.includes(idx)
                 : q.ans === idx;
-              // 判定当前选项是否被用户勾选了
               const isOptionSelected = Array.isArray(u)
                 ? u.includes(idx)
                 : u === idx;
@@ -679,11 +677,11 @@
             : String.fromCharCode(65 + u);
 
           html += `<div class="review-badge">
-                    <div style="color:var(--success); font-weight:600">正确答案: ${ansTxt}</div>
-                    <div style="color:${
-                      isAllCorrect ? "var(--success)" : "var(--error)"
-                    }">你的答案: ${userTxt}</div>
-                   </div></div>`;
+                     <div style="color:var(--success); font-weight:600">正确答案: ${ansTxt}</div>
+                     <div style="color:${
+                       isAllCorrect ? "var(--success)" : "var(--error)"
+                     }">你的答案: ${userTxt}</div>
+                    </div></div>`;
         });
         document.getElementById("review-list").innerHTML = html;
         window.scrollTo(0, 0);
